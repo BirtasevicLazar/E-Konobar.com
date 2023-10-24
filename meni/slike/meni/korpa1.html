@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korpa</title>
+    <link rel="stylesheet" href="korpa.css">
+</head>
+<body>
+    <div>
+        <a href="sto1.html"><h1 class="naslov">-MENI PIVNICE BERLIN-</h1></a>
+    </div>
+
+    <br>
+    <div class="container">
+        
+        <h1>Vaša korpa</h1>
+
+        <ul class="cart-items" id="cart-items">
+            <!-- Proizvodi iz korpe će se ovde prikazati -->
+        </ul>
+
+        <p>Ukupna cena: <span id="total-price">0.00</span> Din</p>
+
+        <form action="procesuiraj_porudzbinu.php" method="POST">
+           
+
+            <label for="napomene">Dodatne napomene(Opcionalno):</label>
+            <textarea id="napomene" name="napomene"></textarea>
+
+            <!-- Ovde ćemo koristiti skriveno polje za čuvanje proizvoda u JSON formatu -->
+            <input type="hidden" id="proizvodi" name="proizvodi" value="">
+
+            <button type="button" id="zavrsi-porudzbinu">Završi porudžbinu</button>
+        </form>
+    </div>
+
+    <script>
+        // Funkcija za prikazivanje proizvoda iz korpe
+        function showCartProducts() {
+            const cartItems = document.getElementById("cart-items");
+            const totalElement = document.getElementById("total-price");
+
+            // Dohvatanje podataka o proizvodima iz URL parametra
+            const urlParams = new URLSearchParams(window.location.search);
+            const productsJson = urlParams.get("products");
+
+            if (productsJson) {
+                const products = JSON.parse(decodeURIComponent(productsJson));
+
+                let total = 0;
+
+                products.forEach(product => {
+                    const li = document.createElement("li");
+                    li.textContent = `${product.Naziv} - ${product.Cena}`;
+                    cartItems.appendChild(li);
+
+                    // Dodajemo cenu proizvoda na ukupnu cenu
+                    total += parseFloat(product.Cena);
+                });
+
+                // Zaokruživanje ukupne cene na dve decimale
+                total = total.toFixed(2);
+
+                // Prikaz ukupne cene
+                totalElement.textContent = total;
+
+                // Postavljanje vrednosti skrivenog input polja za proizvode
+                document.getElementById("proizvodi").value = productsJson;
+
+
+                // Vaš JavaScript kod
+const checkoutButton = document.getElementById("zavrsi-porudzbinu");
+checkoutButton.addEventListener("click", function(event) {
+    const brojStolaInput = document.getElementById("broj-stola");
+    const brojStola = brojStolaInput.value.trim(); // Uklanjanje praznina s početka i kraja unosa
+    
+
+
+    const checkoutButton = document.getElementById("zavrsi-porudzbinu");
+checkoutButton.addEventListener("click", function() {
+    // Postavite vrednost polja "broj-stola" na 1
+    document.getElementById("broj-stola").value = "1";
+    
+    // Slanje forme za procesiranje porudžbine
+    document.querySelector("form").submit();
+});
+
+
+});
+
+                
+            }
+        }
+
+
+            
+
+
+
+
+        // Pozivanje funkcije za prikazivanje proizvoda kad se stranica učita
+        window.addEventListener("load", showCartProducts);
+
+        // Dodajte event listener za dugme "Završi kupovinu"
+        const checkoutButton = document.getElementById("zavrsi-porudzbinu");
+        checkoutButton.addEventListener("click", function() {
+            // Slanje forme za procesiranje porudžbine
+            document.querySelector("form").submit();
+        });
+    </script>
+</body>
+</html>

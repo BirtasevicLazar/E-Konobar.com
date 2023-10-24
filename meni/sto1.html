@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    
+
+    <div id="loader" class="loader">
+        <div class="logo">
+            <img src="slike/logo.png" alt="Logo">
+        </div>
+    </div>
+    
+
+    <div id="content" style="display: none;">
+        <div class="naslov1">
+            <a href="sto1.html?table=brojStola"><h1 class="naslov">-MENI PIVNICE BERLIN-</h1></a>
+        </div>
+
+
+        <div class="dugme1">
+            <button class="dugmence" id="pozovi-konobara-button">Pozovi konobara</button>
+            <button class="dugmence" id="plati-racun-button">Trazi racun</button>
+            <div class="dropdown">
+                <button class="dugmence" id="dropdown-button">Izaberi kategoriju</button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="#TOPLINAPICI">TOPLI NAPICI</a>
+                    <a href="#VODA">VODA</a>
+                    <a href="#CEDJENISOKOVI">CEDJENI SOKOVI</a>
+                    <a href="#NEGAZIRANO">NEGAZIRANO</a>
+                    <a href="#GAZIRANO">GAZIRANO</a>
+                    <a href="#ENERGETSKA">ENERGETSKA</a>
+                </div>
+            </div>
+        </div>
+        
+    
+
+
+<br><br><br><br><br><br><br><br><br><br>
+        <h2 readonly id="TOPLINAPICI">TOPLI NAPICI</h2>
+        <div class="product-container">
+            <!-- Proizvod 1 -->
+            
+            <div class="product">
+                <span class="product-name">Domaca Kafa 180ml</span>
+                <span class="product-price">110 Din</span>
+                <button class="add-to-cart" data-product-id="3" data-product-name="Domaca Kafa" data-product-price="110">Dodaj u korpu</button>
+            </div>
+            <div class="product">
+                <span class="product-name">Espresso 25ml-50ml</span>
+                <span class="product-price">150 Din</span>
+                <button class="add-to-cart" data-product-id="4" data-product-name="Espresso" data-product-price="150">Dodaj u korpu</button>
+            </div>
+            <div class="product">
+                <span class="product-name">Dupli Espresso 50ml</span>
+                <span class="product-price">280 Din</span>
+                <button class="add-to-cart" data-product-id="5" data-product-name="Dupli Espresso" data-product-price="280">Dodaj u korpu</button>
+            </div>
+            <div class="product">
+                <span class="product-name">Espresso sa Mlekom 70ml</span>
+                <span class="product-price">160 Din</span>
+                <button class="add-to-cart" data-product-id="6" data-product-name="Espresso sa Mlekom" data-product-price="160">Dodaj u korpu</button>
+            </div>
+            <div class="product">
+                <span class="product-name">Espreso sa bademovim mlekom 100ml</span>
+                <span class="product-price">210 Din</span>
+                <button class="add-to-cart" data-product-id="7" data-product-name="Espreso sa bademovim mlekom" data-product-price="200">Dodaj u korpu</button>
+            </div>
+            <div class="product">
+                <span class="product-name">Macchiato 70ml</span>
+                <span class="product-price">160 Din</span>
+                <button class="add-to-cart" data-product-id="8" data-product-name="Macchiato" data-product-price="160">Dodaj u korpu</button>
+            </div>
+            <div class="product">
+                <span class="product-name">Nescafe 300ml</span>
+                <span class="product-price">180 Din</span>
+                <button class="add-to-cart" data-product-id="9" data-product-name="Nescafe" data-product-price="180">Dodaj u korpu</button>
+            </div>
+            <div class="product">
+                <span class="product-name">Nescafe sa ukusom</span>
+                <span class="product-price">160 Din</span>
+                <button class="add-to-cart" data-product-id="10" data-product-name="Nescafe sa ukusom" data-product-price="200">Dodaj u korpu</button>
+            </div>
+         
+
+
+        
+    
+        <!-- Korpa -->
+        <div class="cart">
+            <!-- Dugme "Plati račun" -->
+            <ul>
+                <li><button id="checkout-button">Završi kupovinu</button></li>
+            </ul>
+            <br><br>
+            <h2>Korpa</h2>
+            <ul id="cart-items">
+                <!-- Prikazivanje stavki u korpi -->
+            </ul>
+            <p>Ukupna cena: <span id="total-price">0.00</span> Din</p>
+    
+            
+        </div>
+
+    </div>
+
+
+<br><br>
+
+<h2 id="VODA">VODA</h2>
+    <div class="product-container">
+        <!-- Proizvod 1 -->
+        
+        <div class="product">
+            <span class="product-name">Aqua Viva 0,25L</span>
+            <span class="product-price">130 Din</span>
+            <button class="add-to-cart" data-product-id="11" data-product-name="Aqua Viva" data-product-price="130">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Aqua Viva 0,75L</span>
+            <span class="product-price">250 Din</span>
+            <button class="add-to-cart" data-product-id="12" data-product-name="Aqua Viva velika" data-product-price="250">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Knjaz Milos 0,25L</span>
+            <span class="product-price">130 Din</span>
+            <button class="add-to-cart" data-product-id="13" data-product-name="Knjaz Milos" data-product-price="130">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Knjaz Milos 0,75L</span>
+            <span class="product-price">250 Din</span>
+            <button class="add-to-cart" data-product-id="14" data-product-name="Knjaz Milos veliki" data-product-price="250">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Knjaz Milos sa ukusom limuna 0,33L</span>
+            <span class="product-price">180 Din</span>
+            <button class="add-to-cart" data-product-id="15" data-product-name="Knjaz Milos sa ukusom" data-product-price="180">Dodaj u korpu</button>
+        </div>
+        
+</div>
+
+
+
+
+
+
+
+<br><br>
+<h2 id="CEDJENISOKOVI">CEDJENI SOKOVI</h2>
+    <div class="product-container">
+        <!-- Proizvod 1 -->
+        
+        <div class="product">
+            <span class="product-name">Limunada 0,33L</span>
+            <span class="product-price">180 Din</span>
+            <button class="add-to-cart" data-product-id="16" data-product-name="Limunada" data-product-price="180">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Limunada sa Ukusom 0,33L(Nar)</span>
+            <span class="product-price">250 Din</span>
+            <button class="add-to-cart" data-product-id="22" data-product-name="Limunada sa Ukusom (Nar)" data-product-price="250">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Limunada sa Ukusom 0,33L(Breskva)</span>
+            <span class="product-price">250 Din</span>
+            <button class="add-to-cart" data-product-id="23" data-product-name="Limunada sa Ukusom (Breskva)" data-product-price="250">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Limunada sa Ukusom 0,33L(Mango)</span>
+            <span class="product-price">250 Din</span>
+            <button class="add-to-cart" data-product-id="24" data-product-name="Limunada sa Ukusom (Mango)" data-product-price="250">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Limunada sa Ukusom 0,33L(Lubenica)</span>
+            <span class="product-price">250 Din</span>
+            <button class="add-to-cart" data-product-id="25" data-product-name="Limunada sa Ukusom (Lubenica)" data-product-price="250">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Limunada sa Ukusom 0,33L(Sumsko Voce)</span>
+            <span class="product-price">250 Din</span>
+            <button class="add-to-cart" data-product-id="26" data-product-name="Limunada sa Ukusom (Sumsko Voce)" data-product-price="250">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Narandza 0,33L</span>
+            <span class="product-price">300 Din</span>
+            <button class="add-to-cart" data-product-id="17" data-product-name="Narandza" data-product-price="300">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Grejpfrut 0,33L</span>
+            <span class="product-price">300 Din</span>
+            <button class="add-to-cart" data-product-id="18" data-product-name="Grejpfrut" data-product-price="300">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Vitaminski Mix 0,33L (Limun)</span>
+            <span class="product-price">370 Din</span>
+            <button class="add-to-cart" data-product-id="27" data-product-name="Vitaminski Mix (Limun)" data-product-price="370">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Vitaminski Mix 0,33L (Narandza)</span>
+            <span class="product-price">370 Din</span>
+            <button class="add-to-cart" data-product-id="28" data-product-name="Vitaminski Mix (Narandza)" data-product-price="370">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Vitaminski Mix 0,33L (Grejpfrut)</span>
+            <span class="product-price">370 Din</span>
+            <button class="add-to-cart" data-product-id="29" data-product-name="Vitaminski Mix (Grejpfrut)" data-product-price="370">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Ice Tea Breskva 0,33L</span>
+            <span class="product-price">180 Din</span>
+            <button class="add-to-cart" data-product-id="20" data-product-name="Ice Tea breskva" data-product-price="180">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Ice Tea Limun 0,33L</span>
+            <span class="product-price">180 Din</span>
+            <button class="add-to-cart" data-product-id="21" data-product-name="Ice Tea limun" data-product-price="180">Dodaj u korpu</button>
+        </div>
+
+</div>
+
+
+
+<br><br>
+<h2 id="NEGAZIRANO">NEGAZIRANO</h2>
+    <div class="product-container">
+        <!-- Proizvod 1 -->
+        
+        <div class="product">
+            <span class="product-name">Jabuka Gusto 0,2L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="30" data-product-name="Jabuka Gusto" data-product-price="200" data-ukusi="Jabuka Gusto">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Narandza 0,2L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="31" data-product-name="Narandza" data-product-price="200" data-ukusi="Narandza">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Jagoda Gusto 0,2L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="32" data-product-name="Jagoda Gusto" data-product-price="200" data-ukusi="Narandza">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Borovnica Gusto 0,2L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="32" data-product-name="Borovnica Gusto" data-product-price="200" data-ukusi="Borovnica Gusto">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Breskva Gusto 0,2L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="33" data-product-name="Breskva Gusto" data-product-price="200" data-ukusi="Breskva Gusto">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Cedevita Narandza</span>
+            <span class="product-price">160 Din</span>
+            <button class="add-to-cart" data-product-id="34" data-product-name="Cedevita Narandza" data-product-price="160" data-ukusi="Cedevita Narandza">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Cedevita Limun</span>
+            <span class="product-price">160 Din</span>
+            <button class="add-to-cart" data-product-id="35" data-product-name="Cedevita Limun" data-product-price="160" data-ukusi="Cedevita Limun">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Cedevita Zova</span>
+            <span class="product-price">160 Din</span>
+            <button class="add-to-cart" data-product-id="36" data-product-name="Cedevita Zova" data-product-price="160" data-ukusi="Cedevita Zova">Dodaj u korpu</button>
+        </div>
+
+
+
+
+</div>
+<br><br>
+<h2 id="GAZIRANO">GAZIRANO</h2>
+    <div class="product-container">
+        <!-- Proizvod 1 -->
+        
+        <div class="product">
+            <span class="product-name">Coca Cola 0,25L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="37" data-product-name="Coca Cola" data-product-price="200" data-ukusi="Coca Cola">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Coca Cola Zero 0,25L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="38" data-product-name="Coca Cola Zero" data-product-price="200" data-ukusi="Coca Cola Zero">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Pepsi 0,25L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="39" data-product-name="Pepsi" data-product-price="200" data-ukusi="Pepsi">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Pepsi Zero 0,25L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="40" data-product-name="Pepsi Zero" data-product-price="200" data-ukusi="Pepsi Zero">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Sprite 0,25L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="41" data-product-name="Sprite" data-product-price="200" data-ukusi="Sprite">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">7-Up 0,25L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="42" data-product-name="7-Up" data-product-price="200" data-ukusi="7-Up">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Fanta 0,25L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="43" data-product-name="Fanta" data-product-price="200" data-ukusi="Fanta">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Mirinda 0,25L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="44" data-product-name="Mirinda" data-product-price="200" data-ukusi="Mirinda">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Schweppes Bitter 0,25L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="45" data-product-name="Schweppes Bitter" data-product-price="200" data-ukusi="Schweppes Bitter">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Schweppes Tonic 0,25L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="46" data-product-name="Schweppes Tonic" data-product-price="200" data-ukusi="Schweppes Tonic">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Cocta 0,25L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="47" data-product-name="Cocta" data-product-price="200" data-ukusi="Cocta">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Remix Knjaz breskva 0,33L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="48" data-product-name="Remix Knjaz breskva" data-product-price="200" data-ukusi="Remix Knjaz breskva">Dodaj u korpu</button>
+        </div>
+        
+        <div class="product">
+            <span class="product-name">Remix Knjaz narandza 0,33L</span>
+            <span class="product-price">200 Din</span>
+            <button class="add-to-cart" data-product-id="49" data-product-name="Remix Knjaz narandza" data-product-price="200" data-ukusi="Remix Knjaz narandza">Dodaj u korpu</button>
+        </div>
+        
+
+
+
+
+</div>
+
+
+<br><br>
+
+<h2 id="ENERGETSKA">ENERGETSKA</h2>
+    <div class="product-container">
+        <!-- Proizvod 1 -->
+        
+        <div class="product">
+            <span class="product-name">Red Bull 0,25L</span>
+            <span class="product-price">340 Din</span>
+            <button class="add-to-cart" data-product-id="50" data-product-name="Red Bull" data-product-price="340">Dodaj u korpu</button>
+        </div>
+        <div class="product">
+            <span class="product-name">Guarana</span>
+            <span class="product-price">180 Din</span>
+            <button class="add-to-cart" data-product-id="51" data-product-name="Guarana" data-product-price="180">Dodaj u korpu</button>
+        </div>
+        
+
+        
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownButton = document.getElementById("dropdown-button");
+    const dropdownContent = document.querySelector(".dropdown-content");
+
+    let isDropdownOpen = false;
+
+    dropdownButton.addEventListener("click", function () {
+        if (isDropdownOpen) {
+            // Padajući meni je već otvoren, zatvorite ga
+            dropdownContent.style.display = "none";
+        } else {
+            // Padajući meni nije otvoren, otvorite ga
+            dropdownContent.style.display = "block";
+        }
+
+        // Invertujte status padajućeg menija
+        isDropdownOpen = !isDropdownOpen;
+    });
+});
+
+
+
+
+
+
+
+
+// Funkcija za izvlačenje broja stola iz URL-a
+// Funkcija za izvlačenje broja stola iz URL-a
+// Postavite broj stola ovde
+const brojStola = 1; // Zamenite 1 sa željenim brojem stola
+const brojStola1 = 1;
+
+// Funkcija za izvlačenje broja stola iz URL-a
+function getTableNumberFromURL() {
+    return brojStola.toString(); // Koristimo postavljeni broj stola
+}
+
+// Dodajte event listenere za oba dugmeta
+const pozoviKonobaraButton = document.getElementById("pozovi-konobara-button");
+const platiRacunButton = document.getElementById("plati-racun-button");
+
+pozoviKonobaraButton.addEventListener("click", function() {
+    const brojStola = getTableNumberFromURL();
+    const potvrda = confirm("Da li ste sigurni da želite pozvati konobara?");
+    if (potvrda) {
+        // Korisnik je odabrao "OK", izvršite akciju za pozivanje konobara
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "posalji-notifikaciju.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                const response = xhr.responseText;
+                alert(response);
+            }
+        };
+        xhr.send("broj-stola=" + brojStola1);
+    } else {
+        // Korisnik je odabrao "Cancel", nema akcije
+    }
+});
+
+platiRacunButton.addEventListener("click", function() {
+    const brojStola = getTableNumberFromURL();
+    const potvrda = confirm("Da li ste sigurni da želite platiti račun?");
+    if (potvrda) {
+        // Korisnik je odabrao "OK", izvršite akciju za plaćanje računa
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "plati-racun.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                const response = xhr.responseText;
+                alert(response);
+            }
+        };
+        xhr.send("broj-stola=" + brojStola1);
+    } else {
+        // Korisnik je odabrao "Cancel", nema akcije
+    }
+});
+
+
+
+
+
+
+// Pozivamo funkciju za izračunavanje ukupne cene kad se stranica učita
+window.addEventListener("load", calculateTotalPrice);
+
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('content').style.display = 'block'; // Prikazivanje ostalog sadržaja
+            }, 1000); // Logo će biti prikazan 2 sekunde (2000 milisekundi)
+        };
+    
+        // Funkcija za dohvatanje podataka iz baze i dodavanje u korpu
+        function getProductData(productId) {
+            // Kreiranje AJAX zahteva
+            const xhr = new XMLHttpRequest();
+    
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Obrada podataka koji su stigli sa servera
+                    const productData = JSON.parse(xhr.responseText);
+    
+                    // Dodavanje proizvoda u korpu
+                    addToCart(productData);
+                }
+            };
+    
+            // Definisanje URL-a za dohvatanje podataka o proizvodu
+            const url = `meni.php?ID=${productId}`; // Zamijenite sa stvarnim URL-om
+    
+            // Slanje AJAX zahteva
+            xhr.open("GET", url, true);
+            xhr.send();
+        }
+    
+        // Funkcija za dodavanje proizvoda u korpu
+        function addToCart(productData) {
+    const cartItems = document.getElementById("cart-items");
+    const cartItem = document.createElement("li");
+    cartItem.innerHTML = `${productData.Naziv} - ${productData.Cena}`;
+
+    // Kreirajte dugme za uklanjanje i dodajte event listener
+    const removeButton = document.createElement("button");
+    removeButton.textContent = " -";
+    removeButton.addEventListener("click", removeProduct);
+
+    // Dodajte element za uklanjanje uz proizvod u korpi
+    cartItem.appendChild(removeButton);
+
+    cartItems.appendChild(cartItem);
+    calculateTotalPrice();
+}
+
+// Funkcija za uklanjanje proizvoda iz korpe
+function removeProduct(event) {
+    const cartItem = event.target.closest("li");
+    cartItem.remove();
+    calculateTotalPrice();
+}
+    
+        // Dodavanje event listenera za svako dugme "Dodaj u korpu" na stranici
+        const addToCartButtons = document.querySelectorAll(".add-to-cart");
+        addToCartButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                const productName = this.getAttribute("data-product-name");
+                const productPrice = this.getAttribute("data-product-price");
+    
+                // Dodajemo proizvod u korpu
+                addToCart({ Naziv: productName, Cena: productPrice });
+            });
+        });
+    
+        // Funkcija za izračunavanje ukupne cene
+        function calculateTotalPrice() {
+            const cartItems = document.getElementById("cart-items");
+            const totalPriceElement = document.getElementById("total-price");
+            const items = cartItems.querySelectorAll("li");
+    
+            let total = 0;
+    
+            items.forEach(item => {
+                const itemText = item.textContent;
+                const price = parseFloat(itemText.split(" - ")[1]);
+                total += price;
+            });
+    
+            // Zaokruživanje na dve decimale
+            total = total.toFixed(2);
+    
+            // Ažuriranje prikaza ukupne cene
+            totalPriceElement.textContent = total;
+        }
+    
+        // Pozivamo funkciju za izračunavanje ukupne cene kad se stranica učita
+        window.addEventListener("load", calculateTotalPrice);
+    
+        // Funkcija za završetak kupovine
+        function checkout() {
+            const cartItems = document.getElementById("cart-items");
+            const items = cartItems.querySelectorAll("li");
+    
+            if (items.length === 0) {
+                alert("Vaša korpa je prazna. Molimo vas da dodate proizvode pre nego što završite kupovinu.");
+                return; // Prekidamo proces završetka kupovine
+            }
+    
+            // Nastavljamo sa procesom završetka kupovine
+            const productsInCart = [];
+            items.forEach(item => {
+                const itemText = item.textContent;
+                const [name, price] = itemText.split(" - ");
+                productsInCart.push({ Naziv: name, Cena: price });
+            });
+    
+            const productsJson = JSON.stringify(productsInCart);
+            const checkoutURL = `korpa1.html?products=${encodeURIComponent(productsJson)}`;
+            window.location.href = checkoutURL;
+        }
+    
+        // Dodajte event listener za dugme "Završi kupovinu"
+        const checkoutButton = document.getElementById("checkout-button");
+        checkoutButton.addEventListener("click", checkout);
+
+
+
+
+
+        window.addEventListener('pageshow', function (event) {
+        // Proverite da li se stranica ponovo prikazuje iz keša
+        if (event.persisted) {
+            location.reload(); // Ako da, osvežite stranicu
+        }
+    });
+    </script>
+    
+
+    
+
+
+<br>
+<footer>
+    <br><br><br>
+        <div class="footer-content">
+            <p>&copy; E-Konobar</p>
+        </div>
+        <br><br><br>
+    </footer>
+
+
+</body>
+</html>

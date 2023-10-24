@@ -1,0 +1,65 @@
+/* Resetovanje osnovnih stilova za početak */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stilizacija naslova */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Stilizacija tabele */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stilizacija zaglavlja tabele */
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Stilizacija redova tabele */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Stilizacija dugmeta za brisanje */
+button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #c82333;
+}
+
+/* Stilizacija futera */
+footer {
+    background-color: #000000; /* Boja pozadine futera */
+    color: #fff; /* Boja teksta */
+    padding: 20px 0; /* Unutrašnji razmak futera */
+    margin-top: 40px;
+}
+
+.footer-content {
+    text-align: center; /* Centriranje teksta */
+}
